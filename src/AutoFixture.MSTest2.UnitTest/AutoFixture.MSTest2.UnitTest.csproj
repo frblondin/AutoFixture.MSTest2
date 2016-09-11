@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Packages\MSTest.TestAdapter.1.0.3-preview\build\net451\MSTest.TestAdapter.props" Condition="Exists('..\Packages\MSTest.TestAdapter.1.0.3-preview\build\net451\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67D81234-8589-4E11-85BC-C0C49399A289}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoFixture.MSTest2.UnitTest</RootNamespace>
+    <AssemblyName>AutoFixture.MSTest2.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\MSTest.TestFramework.1.0.1-preview\lib\net451\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\MSTest.TestFramework.1.0.1-preview\lib\net451\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MSTest.TestFramework.AdvancedDataRow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a76d5de49b936d95, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.AdvancedDataRow.1.0.0-CI00003\lib\net451\MSTest.TestFramework.AdvancedDataRow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstitute, Version=1.10.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\Packages\NSubstitute.1.10.0.0\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture">
+      <HintPath>..\packages\AutoFixture.3.50.2\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoDataAttributeTest.cs" />
+    <Compile Include="ComposerWithoutADefaultConstructor.cs" />
+    <Compile Include="CompositeDataAttributeSufficientDataTest.cs" />
+    <Compile Include="CompositeDataAttributeTest.cs" />
+    <Compile Include="CustomizeAttributeTest.cs" />
+    <Compile Include="CustomizedFixture.cs" />
+    <Compile Include="DelegatingCustomization.cs" />
+    <Compile Include="DelegatingCustomizeAttribute.cs" />
+    <Compile Include="DelegatingFixture.cs" />
+    <Compile Include="DelegatingSpecimenBuilder.cs" />
+    <Compile Include="DependencyConstraints.cs" />
+    <Compile Include="Extensions\DataAttributeExtensions.cs" />
+    <Compile Include="FrozenAttributeTest.cs" />
+    <Compile Include="GreedyAttributeTest.cs" />
+    <Compile Include="ModestAttributeTest.cs" />
+    <Compile Include="MyClass.cs" />
+    <Compile Include="NoAutoPropertiesAttributeTest.cs" />
+    <Compile Include="FavorArraysAttributeTest.cs" />
+    <Compile Include="FavorEnumerablesAttributeTest.cs" />
+    <Compile Include="FavorListsAttributeTest.cs" />
+    <Compile Include="FakeDataAttribute.cs" />
+    <Compile Include="InlineAutoDataAttributeTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenario.cs" />
+    <Compile Include="TypeWithCustomizationAttributes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoFixture.MSTest2\AutoFixture.MSTest2.csproj">
+      <Project>{240605c0-84dc-4b01-a79e-1123d20bb25d}</Project>
+      <Name>AutoFixture.MSTest2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestTypeFoundation\TestTypeFoundation.csproj">
+      <Project>{7ff65787-f462-4204-bb9d-60b0d1bb6cc1}</Project>
+      <Name>TestTypeFoundation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\Packages\MSTest.TestAdapter.1.0.3-preview\build\net451\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\MSTest.TestAdapter.1.0.3-preview\build\net451\MSTest.TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

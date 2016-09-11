@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>AutoFixture.MSTest2</id>
+        <version>$version$</version>
+        <title>AutoFixture with MSTest v2 data methods</title>
+        <authors>Mark Seemann, frblondin</authors>
+        <owners>Mark Seemann, frblondin</owners>
+        <summary>Extension to AutoFixture that integrates it with MSTest v2.</summary>
+        <description>By leveraging the data method feature of MSTest, this extension turns AutoFixture into a declarative framework for writing unit tests. In many ways it becomes a unit testing DSL (Domain Specific Language).</description>
+        <iconUrl>https://raw.githubusercontent.com/AutoFixture/AutoFixture/master/AutoFixtureLogo200x200.png</iconUrl>
+        <language>en-US</language>
+        <licenseUrl>https://github.com/frblondin/AutoFixture.MSTest2/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/frblondin/AutoFixture.MSTest2</projectUrl>
+        <tags>MSTest TestFramework Microsoft Unittest Autofixture</tags>
+
+    </metadata>
+    <files>
+        <file src="bin\$configuration$\AutoFixture.MSTest2.dll" target="lib\net451\" />
+    </files>
+</package>

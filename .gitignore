@@ -1,0 +1,11 @@
+.idea/
+.svn/
+obj/
+bin/
+*.suo
+*.user
+*.map
+out/
+*.orig
+*.patch
+packages/
